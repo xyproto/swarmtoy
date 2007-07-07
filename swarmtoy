@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*-coding:utf-8-*-
 #
-# SwarmToy v.0.1
+# SwarmToy v.0.2
 # A frenetic game
 # 7th of July 2007
 # Alexander Rødseth
@@ -437,15 +437,15 @@ class World:
 
 class Game:
 
-    def __init__(size):
+    def __init__(self, size):
         pygame.display.init()
         self.screen = pygame.display.set_mode(size)
         pygame.event.set_allowed([pygame.QUIT, pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN])
         pygame.mouse.set_visible(False)
 
-    def mainloop():
+    def mainloop(self):
         world = World(self.screen)
-        size = screen.get_size()
+        size = self.screen.get_size()
         clock = pygame.time.Clock()
 
         BGCOLOR = (0, 0, 0)

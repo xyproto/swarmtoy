@@ -486,9 +486,9 @@ class Game:
                     if event.key in [pygame.K_ESCAPE, pygame.K_q]:
                         running = False
                     elif event.key == pygame.K_SPACE:
-                        world = World(screen)
+                        world = World(self.screen)
                     elif event.key == pygame.K_RETURN:
-                        world = World(screen, 0, 0)
+                        world = World(self.screen, 0, 0)
                     elif event.key == pygame.K_p:
                         pause = not pause
                         if pause:

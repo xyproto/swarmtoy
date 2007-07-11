@@ -1,0 +1,6 @@
+Instructions:
+
+1. Install Python
+2. Install Pygame
+3. Install Psyco (optional)
+4. Run "swarmtoy" with python

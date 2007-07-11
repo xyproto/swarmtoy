@@ -12,14 +12,13 @@
 try:
     import psyco
     psyco.full()
-except ImportException:
+except ImportError:
     pass
 
 import pygame
 from pygame.locals import *
 from random import choice
 from math import sqrt
-
 
 class Position:
 
@@ -41,6 +40,7 @@ class Energy:
             self.energy = 0
         elif self.energy > self.maxenergy:
             self.energy = self.maxenergy
+
 
 class Bound(Position):
 
@@ -127,6 +127,7 @@ class Snack(Food):
         g = 50.0 + 200.0 * max(0, (i - 0.8)) * 5.0
         b = 20.0 + 230.0 * i
         return (int(r), int(g), int(b))
+
 
 class LimitedIntelligence(Bound):
     """Adds some limited intelligence to a class with position and boundaries.
@@ -228,6 +229,7 @@ class LimitedIntelligence(Bound):
             self.y -= speed
         elif self.y < centery:
             self.y += speed
+
 
 class Bee(Bound, Energy, LimitedIntelligence):
     """Represents a little bee. It can move, eat, fight, die and have children."""
@@ -434,6 +436,7 @@ class World:
         for sna in kill:
             self.snack.remove(sna)
         return rects
+
 
 class Game:
 

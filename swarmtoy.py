@@ -508,7 +508,7 @@ class Game:
                 self.screen.fill(BGCOLOR)
                 rects += world.draw((x, y))
                 rects.append(pygame.draw.line(self.screen, LINECOLOR, (x - 8, y), (x + 9, y), 2))
-                rects.append(pygame.draw.line(self.screen, LINECOLOR, (x, y - 8), (x, y + 9), 2))    
+                rects.append(pygame.draw.line(self.screen, LINECOLOR, (x, y - 8), (x, y + 9), 2))
 
                 #pygame.display.update(rects)
                 pygame.display.flip()
